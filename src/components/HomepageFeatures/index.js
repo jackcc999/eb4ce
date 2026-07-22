@@ -4,44 +4,41 @@ import styles from './styles.module.css';
 
 const FeatureList = [
   {
-    title: 'Easy to Use',
-    Svg: require('@site/static/img/undraw_docusaurus_mountain.svg').default,
+    icon: '🧠',
+    title: '理解，而不是死记',
     description: (
       <>
-        Docusaurus was designed from the ground up to be easily installed and
-        used to get your website up and running quickly.
+        不只告诉你语法规则，还解释为什么母语者会这样表达，帮助你真正建立英语思维。
       </>
     ),
   },
   {
-    title: 'Focus on What Matters',
-    Svg: require('@site/static/img/undraw_docusaurus_tree.svg').default,
+    icon: '💼',
+    title: '真实工程师英语',
     description: (
       <>
-        Docusaurus lets you focus on your docs, and we&apos;ll do the chores. Go
-        ahead and move your docs into the <code>docs</code> directory.
+        覆盖 Standup、Slack、邮件、代码评审、系统设计、技术面试和 AI 项目讨论。
       </>
     ),
   },
   {
-    title: 'Powered by React',
-    Svg: require('@site/static/img/undraw_docusaurus_react.svg').default,
+    icon: '🇨🇳',
+    title: '专为中文母语者设计',
     description: (
       <>
-        Extend or customize your website layout by reusing React. Docusaurus can
-        be extended while reusing the same header and footer.
+        每个知识点都解释中文思维为什么容易导致错误，并给出更自然、更地道的表达方式。
       </>
     ),
   },
 ];
 
-function Feature({Svg, title, description}) {
+function Feature({icon, title, description}) {
   return (
     <div className={clsx('col col--4')}>
-      <div className="text--center">
-        <Svg className={styles.featureSvg} role="img" />
-      </div>
-      <div className="text--center padding-horiz--md">
+      <div className={styles.featureCard}>
+        <div className={styles.featureIcon} aria-hidden="true">
+          {icon}
+        </div>
         <Heading as="h3">{title}</Heading>
         <p>{description}</p>
       </div>
@@ -53,9 +50,13 @@ export default function HomepageFeatures() {
   return (
     <section className={styles.features}>
       <div className="container">
+        <div className={styles.sectionHeader}>
+          <Heading as="h2">为什么选择 EB4CE？</Heading>
+          <p>不是传统语法书，而是一套面向中国工程师的实用英语系统。</p>
+        </div>
         <div className="row">
-          {FeatureList.map((props, idx) => (
-            <Feature key={idx} {...props} />
+          {FeatureList.map((props) => (
+            <Feature key={props.title} {...props} />
           ))}
         </div>
       </div>
