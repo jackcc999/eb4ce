@@ -46,43 +46,65 @@
   opacity: 0.75;
 }
 
-.learningPath {
-  padding: 5rem 0 6rem;
+.learningPath,
+.popularSection,
+.missionSection,
+.openSourceSection {
+  padding: 5rem 0;
+}
+
+.learningPath,
+.missionSection {
   background: var(--ifm-background-surface-color);
 }
 
 .sectionHeader {
-  max-width: 720px;
+  max-width: 760px;
   margin: 0 auto 2.5rem;
   text-align: center;
 }
 
 .sectionHeader h2 {
-  font-size: 2.2rem;
   margin-bottom: 0.75rem;
+  font-size: 2.2rem;
 }
 
 .sectionHeader p {
   margin: 0;
   color: var(--ifm-color-emphasis-700);
   font-size: 1.05rem;
+  line-height: 1.7;
 }
 
-.pathGrid {
+.sectionLabel {
+  display: inline-block;
+  margin-bottom: 0.75rem;
+  color: var(--ifm-color-primary);
+  font-size: 0.78rem;
+  font-weight: 800;
+  letter-spacing: 0.12em;
+}
+
+.pathGrid,
+.topicGrid {
   display: grid;
   grid-template-columns: repeat(3, minmax(0, 1fr));
   gap: 1.5rem;
 }
 
-.pathCard {
-  display: block;
-  padding: 2rem;
+.pathCard,
+.topicCard {
   border: 1px solid var(--ifm-color-emphasis-200);
   border-radius: 18px;
   background: var(--ifm-background-color);
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
+}
+
+.pathCard {
+  display: block;
+  padding: 2rem;
   color: inherit;
   text-decoration: none;
-  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
   transition: transform 180ms ease, box-shadow 180ms ease, border-color 180ms ease;
 }
 
@@ -94,14 +116,22 @@
   box-shadow: 0 18px 40px rgba(0, 0, 0, 0.09);
 }
 
-.pathCard h3 {
+.pathCard h3,
+.topicCard h3 {
   margin: 0.8rem 0;
 }
 
-.pathCard p {
-  margin: 0;
+.pathCard p,
+.topicCard p,
+.missionCard p,
+.openSourceCard p {
   color: var(--ifm-color-emphasis-700);
   line-height: 1.7;
+}
+
+.pathCard p,
+.topicCard p {
+  margin-bottom: 0;
 }
 
 .pathNumber {
@@ -111,12 +141,133 @@
   letter-spacing: 0.08em;
 }
 
+.topicCard {
+  padding: 1.75rem;
+}
+
+.topicCategory {
+  display: inline-flex;
+  padding: 0.35rem 0.65rem;
+  border-radius: 999px;
+  background: var(--ifm-color-primary-lightest);
+  color: var(--ifm-color-primary-darkest);
+  font-size: 0.78rem;
+  font-weight: 700;
+}
+
+.comingSoon {
+  display: inline-block;
+  margin-top: 1.25rem;
+  color: var(--ifm-color-emphasis-600);
+  font-size: 0.85rem;
+  font-weight: 600;
+}
+
+.missionCard,
+.openSourceCard {
+  display: grid;
+  grid-template-columns: 1.1fr 0.9fr;
+  gap: 3rem;
+  align-items: center;
+  padding: 3rem;
+  border: 1px solid var(--ifm-color-emphasis-200);
+  border-radius: 24px;
+  background: var(--ifm-background-color);
+  box-shadow: 0 16px 45px rgba(0, 0, 0, 0.06);
+}
+
+.missionCard h2,
+.openSourceCard h2 {
+  margin-bottom: 1rem;
+  font-size: 2rem;
+}
+
+.missionCard p,
+.openSourceCard p {
+  margin: 0;
+}
+
+.missionPoints {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 1rem;
+}
+
+.missionPoints div {
+  padding: 1.2rem;
+  border-radius: 14px;
+  background: var(--ifm-background-surface-color);
+}
+
+.missionPoints strong,
+.missionPoints span {
+  display: block;
+}
+
+.missionPoints strong {
+  margin-bottom: 0.35rem;
+  color: var(--ifm-color-primary);
+}
+
+.missionPoints span {
+  color: var(--ifm-color-emphasis-700);
+  font-size: 0.92rem;
+  line-height: 1.5;
+}
+
+.openSourceSection {
+  padding-bottom: 6rem;
+}
+
+.openSourceCard {
+  background:
+    linear-gradient(135deg, rgba(47, 133, 90, 0.08), transparent 60%),
+    var(--ifm-background-color);
+}
+
+.openSourceActions {
+  display: flex;
+  justify-content: flex-end;
+  gap: 1rem;
+  flex-wrap: wrap;
+}
+
 @media screen and (max-width: 996px) {
   .heroBanner {
     padding: 4rem 1.5rem;
   }
 
-  .pathGrid {
+  .pathGrid,
+  .topicGrid,
+  .missionCard,
+  .openSourceCard {
+    grid-template-columns: 1fr;
+  }
+
+  .missionCard,
+  .openSourceCard {
+    padding: 2rem;
+    gap: 2rem;
+  }
+
+  .openSourceActions {
+    justify-content: flex-start;
+  }
+}
+
+@media screen and (max-width: 576px) {
+  .heroSubtitle {
+    font-size: 1.05rem;
+  }
+
+  .learningPath,
+  .popularSection,
+  .missionSection,
+  .openSourceSection {
+    padding: 3.5rem 0;
+  }
+
+  .missionPoints {
     grid-template-columns: 1fr;
   }
 }
