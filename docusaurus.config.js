@@ -5,7 +5,7 @@ import {themes as prismThemes} from 'prism-react-renderer';
 /** @type {import('@docusaurus/types').Config} */
 const config = {
   title: 'English Bible for Chinese Engineers',
-  tagline: 'Learn English the Way Engineers Think',
+  tagline: 'Build English Intuition. Learn the Way Engineers Think.',
 
   favicon: 'img/favicon.ico',
 
@@ -62,7 +62,7 @@ const config = {
         {
           name: 'description',
           content:
-            '为中国工程师打造的实用英语知识库，讲解语法、核心句型、常见错误，以及会议、代码评审、邮件和技术面试中的真实英语表达。',
+            '帮助中文母语工程师从第一性原理理解英语，建立英语直觉，并在会议、代码评审、邮件和技术面试中自然表达。',
         },
       ],
 
@@ -75,9 +75,14 @@ const config = {
         items: [
           {
             type: 'docSidebar',
-            sidebarId: 'tutorialSidebar',
+            sidebarId: 'learningSidebar',
             position: 'left',
-            label: '学习指南',
+            label: 'Start Learning',
+          },
+          {
+            to: '/docs/start/learning-roadmap',
+            label: 'Roadmap',
+            position: 'left',
           },
           {
             href: 'https://github.com/jackcc999/eb4ce',
@@ -91,38 +96,26 @@ const config = {
         style: 'dark',
         links: [
           {
-            title: '学习',
+            title: 'Learn',
             items: [
-              {
-                label: '开始学习',
-                to: '/docs/intro',
-              },
+              {label: 'Start Here', to: '/docs/intro'},
+              {label: 'Learning Roadmap', to: '/docs/start/learning-roadmap'},
+              {label: 'How to Use EB4CE', to: '/docs/start/how-to-use'},
             ],
           },
           {
-            title: '开源项目',
+            title: 'Knowledge',
             items: [
-              {
-                label: '查看 GitHub',
-                href: 'https://github.com/jackcc999/eb4ce',
-              },
-              {
-                label: '提交建议',
-                href: 'https://github.com/jackcc999/eb4ce/issues',
-              },
+              {label: 'Sentence Structure', to: '/docs/sentence-structure/sentence-structure'},
+              {label: 'Think in English', to: '/docs/think-in-english/think-in-english'},
+              {label: 'Engineer English', to: '/docs/engineer-english/engineer-english'},
             ],
           },
           {
-            title: '理念',
+            title: 'Open Source',
             items: [
-              {
-                label: 'Understand, Don’t Memorize',
-                to: '/docs/intro',
-              },
-              {
-                label: 'Learn the Way Engineers Think',
-                to: '/docs/intro',
-              },
+              {label: 'GitHub', href: 'https://github.com/jackcc999/eb4ce'},
+              {label: 'Submit an Issue', href: 'https://github.com/jackcc999/eb4ce/issues'},
             ],
           },
         ],
