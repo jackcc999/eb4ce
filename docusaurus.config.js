@@ -21,7 +21,12 @@ const config = {
   trailingSlash: false,
 
   onBrokenLinks: 'throw',
-  onBrokenMarkdownLinks: 'warn',
+
+  markdown: {
+    hooks: {
+      onBrokenMarkdownLinks: 'warn',
+    },
+  },
 
   i18n: {
     defaultLocale: 'zh-CN',
@@ -37,10 +42,7 @@ const config = {
           sidebarPath: './sidebars.js',
           editUrl: 'https://github.com/jackcc999/eb4ce/edit/main/',
         },
-        blog: {
-          showReadingTime: true,
-          editUrl: 'https://github.com/jackcc999/eb4ce/edit/main/blog/',
-        },
+        blog: false,
         theme: {
           customCss: './src/css/custom.css',
         },
@@ -78,11 +80,6 @@ const config = {
             label: '学习指南',
           },
           {
-            to: '/blog',
-            label: '更新日志',
-            position: 'left',
-          },
-          {
             href: 'https://github.com/jackcc999/eb4ce',
             label: 'GitHub',
             position: 'right',
@@ -99,10 +96,6 @@ const config = {
               {
                 label: '开始学习',
                 to: '/docs/intro',
-              },
-              {
-                label: '更新日志',
-                to: '/blog',
               },
             ],
           },
