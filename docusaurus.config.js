@@ -5,7 +5,7 @@ import {themes as prismThemes} from 'prism-react-renderer';
 /** @type {import('@docusaurus/types').Config} */
 const config = {
   title: 'English Bible for Chinese Engineers',
-  tagline: 'Practical English for Chinese Engineers',
+  tagline: 'Learn English the Way Engineers Think',
 
   favicon: 'img/favicon.ico',
 
@@ -13,21 +13,11 @@ const config = {
     v4: true,
   },
 
-  // GitHub Pages 网站域名
   url: 'https://jackcc999.github.io',
-
-  // GitHub Pages 项目路径
   baseUrl: '/eb4ce/',
-
-  // GitHub 用户名
   organizationName: 'jackcc999',
-
-  // GitHub 仓库名
   projectName: 'eb4ce',
-
-  // Docusaurus deploy 命令使用的部署分支
   deploymentBranch: 'gh-pages',
-
   trailingSlash: false,
 
   onBrokenLinks: 'throw',
@@ -45,19 +35,12 @@ const config = {
       ({
         docs: {
           sidebarPath: './sidebars.js',
-
-          // 每篇文档底部显示 Edit this page
-          editUrl:
-            'https://github.com/jackcc999/eb4ce/edit/main/',
+          editUrl: 'https://github.com/jackcc999/eb4ce/edit/main/',
         },
-
         blog: {
           showReadingTime: true,
-
-          editUrl:
-            'https://github.com/jackcc999/eb4ce/edit/main/blog/',
+          editUrl: 'https://github.com/jackcc999/eb4ce/edit/main/blog/',
         },
-
         theme: {
           customCss: './src/css/custom.css',
         },
@@ -72,28 +55,31 @@ const config = {
         {
           name: 'keywords',
           content:
-            'English, Chinese Engineers, Engineering English, 英语学习, 工程师英语',
+            'English for Chinese Engineers, Engineering English, Chinese English Learners, 英语语法, 工程师英语, 程序员英语, 硅谷英语, 技术面试英语',
+        },
+        {
+          name: 'description',
+          content:
+            '为中国工程师打造的实用英语知识库，讲解语法、核心句型、常见错误，以及会议、代码评审、邮件和技术面试中的真实英语表达。',
         },
       ],
 
       navbar: {
-        title: 'English Bible for Chinese Engineers',
-
+        title: 'EB4CE',
         logo: {
           alt: 'English Bible for Chinese Engineers Logo',
           src: 'img/logo.svg',
         },
-
         items: [
           {
             type: 'docSidebar',
             sidebarId: 'tutorialSidebar',
             position: 'left',
-            label: '英语文档',
+            label: '学习指南',
           },
           {
             to: '/blog',
-            label: '博客',
+            label: '更新日志',
             position: 'left',
           },
           {
@@ -106,37 +92,48 @@ const config = {
 
       footer: {
         style: 'dark',
-
         links: [
           {
-            title: '内容',
+            title: '学习',
             items: [
               {
-                label: '英语文档',
+                label: '开始学习',
                 to: '/docs/intro',
               },
               {
-                label: '博客',
+                label: '更新日志',
                 to: '/blog',
               },
             ],
           },
           {
-            title: '项目',
+            title: '开源项目',
             items: [
               {
-                label: 'GitHub',
+                label: '查看 GitHub',
                 href: 'https://github.com/jackcc999/eb4ce',
               },
               {
-                label: '提交问题',
+                label: '提交建议',
                 href: 'https://github.com/jackcc999/eb4ce/issues',
               },
             ],
           },
+          {
+            title: '理念',
+            items: [
+              {
+                label: 'Understand, Don’t Memorize',
+                to: '/docs/intro',
+              },
+              {
+                label: 'Learn the Way Engineers Think',
+                to: '/docs/intro',
+              },
+            ],
+          },
         ],
-
-        copyright: `Copyright © ${new Date().getFullYear()} English Bible for Chinese Engineers.`,
+        copyright: `Copyright © ${new Date().getFullYear()} English Bible for Chinese Engineers. Built as an open-source learning project.`,
       },
 
       prism: {
