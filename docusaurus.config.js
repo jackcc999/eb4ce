@@ -106,9 +106,9 @@ const config = {
           {
             title: 'Knowledge',
             items: [
-              {label: 'Sentence Structure', to: '/docs/sentence-structure/sentence-structure'},
-              {label: 'Think in English', to: '/docs/think-in-english/think-in-english'},
-              {label: 'Engineer English', to: '/docs/engineer-english/engineer-english'},
+              {label: 'Sentence Structure', to: '/docs/sentence-structure'},
+              {label: 'Think in English', to: '/docs/think-in-english'},
+              {label: 'Engineer English', to: '/docs/engineer-english'},
             ],
           },
           {
