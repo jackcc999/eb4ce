@@ -1,22 +1,26 @@
-# Website
+# English Bible for Chinese Engineers
 
-This website is built using [Docusaurus](https://docusaurus.io/), a modern static website generator.
+**Learn English the Way Engineers Think.**
 
-## Installation
+EB4CE is an open-source English knowledge base designed for Chinese software engineers.
+
+The project focuses on:
+
+- explaining why native speakers use a particular expression;
+- comparing Chinese thinking with natural English thinking;
+- using real examples from Slack, meetings, code reviews, email, interviews, and engineering discussions;
+- helping learners understand English instead of memorizing isolated grammar rules.
+
+## Website
+
+https://jackcc999.github.io/eb4ce/
+
+## Local development
 
 ```bash
 npm install
-```
-
-**Note**: feel free to use the package manager of your choice.
-
-## Local Development
-
-```bash
 npm run start
 ```
-
-This command starts a local development server and opens up a browser window. Most changes are reflected live without having to restart the server.
 
 ## Build
 
@@ -24,20 +28,6 @@ This command starts a local development server and opens up a browser window. Mo
 npm run build
 ```
 
-This command generates static content into the `build` directory and can be served using any static contents hosting service.
+## Contributing
 
-## Deployment
-
-Using SSH:
-
-```bash
-USE_SSH=true npm run deploy
-```
-
-Not using SSH:
-
-```bash
-GIT_USER=<Your GitHub username> npm run deploy
-```
-
-If you are using GitHub Pages for hosting, this command is a convenient way to build the website and push to the `gh-pages` branch.
+Issues and pull requests are welcome. Content should prioritize clear explanations, real usage, common mistakes, and practical engineer examples.
