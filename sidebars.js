@@ -17,6 +17,7 @@ const sidebars = {
       items: [
         'foundations/why-english-feels-difficult',
         'foundations/what-is-a-sentence',
+        'foundations/why-english-needs-a-subject',
       ],
     },
     {
