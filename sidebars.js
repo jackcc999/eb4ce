@@ -11,6 +11,13 @@ const sidebars = {
     },
     {
       type: 'category',
+      label: 'Foundations',
+      collapsed: false,
+      link: {type: 'generated-index', title: 'Foundations'},
+      items: ['foundations/why-english-feels-difficult'],
+    },
+    {
+      type: 'category',
       label: 'Sentence Structure',
       link: {type: 'doc', id: 'sentence-structure/sentence-structure'},
       items: [],
