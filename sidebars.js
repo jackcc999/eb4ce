@@ -14,7 +14,10 @@ const sidebars = {
       label: 'Foundations',
       collapsed: false,
       link: {type: 'generated-index', title: 'Foundations'},
-      items: ['foundations/why-english-feels-difficult'],
+      items: [
+        'foundations/why-english-feels-difficult',
+        'foundations/what-is-a-sentence',
+      ],
     },
     {
       type: 'category',
